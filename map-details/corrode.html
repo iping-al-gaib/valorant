@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VALORANT Hub - Corrode</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../InitiatorClassSymbol.webp">
+    <style>
+        body { background-color: #0f1923; position: relative; }
+        body::before {
+            content: ''; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: -1; background-image: url('../Bundle_FRGMT_X_WNGMN.webp');
+            background-size: cover; background-position: center center; background-attachment: fixed;
+            filter: brightness(0.3);
+        }
+        .map-hero-banner { width: 100%; height: 350px; overflow: hidden; margin-top: 20px; }
+        .map-hero-banner img { width: 100%; height: 100%; object-fit: cover; }
+        .map-detail-container{display:flex;gap:40px;margin-top:40px;align-items:flex-start}
+        .map-image-layout{flex-basis:60%;background:rgba(28, 37, 46, 0.8);padding:20px;border-radius:8px}
+        .map-image-layout img{width:100%}
+        .map-info{flex-basis:40%}
+        .map-info h1{font-size:3rem;margin-top:0;margin-bottom:5px;color:#ff4655}
+        .map-info .location{font-size:1rem;color:#ccc;margin-bottom:20px}
+        .agent-recs{margin-top:20px;}
+        .agent-recs-grid{display:flex;gap:10px;margin-top:10px;align-items:center;}
+        .agent-recs-grid img{width:50px;height:50px;border-radius:50%;background:#1c252e;padding:5px;border:2px solid #3a495a;}
+
+        @font-face { font-family: 'ValorantFont'; src: url('../fonts/Valorant Font.ttf') format('truetype'); }
+        .map-info h1, .map-info h3 { font-family: 'ValorantFont', sans-serif; }
+    </style>
+</head>
+<body>
+    <header class="site-header"><div class="container nav"><div class="brand"><span class="dot"></span> VALORANT Hub</div><nav class="nav-links"><a href="../home.html">Home</a><a href="../agent.html">Agents</a><a class="active" href="../maps.html">Maps</a></nav></div></header>
+    <div class="map-hero-banner"><img src="../maps/Loading_Screen_Corrode.webp" alt="Corrode Header Image"></div>
+    <main class="section">
+        <div class="container">
+            <div class="map-detail-container">
+                <div class="map-image-layout"><img src="../maps/Corrode_minimap.webp" alt="Corrode Minimap Layout"></div>
+                <div class="map-info">
+                    <h1>CORRODE</h1>
+                    <p class="location"><strong>// LOCATION</strong><br>Unknown</p>
+                    <h3>// OVERVIEW</h3>
+                    <p>A contaminated industrial facility defined by its winding lanes and tight corridors. Fights often revolve around controlling chokepoints and using area-denial abilities to manage the hazardous environment.</p>
+                    <h3>// UNIQUE FEATURE</h3>
+                    <p><strong>Contaminated Zones:</strong> Certain areas of the map may feature environmental hazards that require strategic navigation and control.</p>
+                    <div class="agent-recs">
+                        <h3>// VCT AGENT RECOMMENDATIONS</h3>
+                        <p class="muted">No VCT data is available for this map.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

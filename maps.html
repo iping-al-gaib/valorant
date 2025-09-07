@@ -6,11 +6,104 @@
     <title>VALORANT Hub - Maps</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="InitiatorClassSymbol.webp">
+    <style>
+        /* --- (BARU) BACKGROUND HALAMAN --- */
+        body {
+            background-image: url('Bundle_FRGMT_X_WNGMN.webp');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #0f1923; /* Warna cadangan jika gambar gagal dimuat */
+        }
+
+        /* --- FONT KUSTOM --- */
+        @font-face {
+          font-family: 'ValorantFont';
+          src: url('fonts/Valorant Font.ttf') format('truetype');
+        }
+        .font-valorant { font-family: 'ValorantFont', sans-serif; }
+
+        /* --- HERO SECTION --- */
+        .hero-maps {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: rgba(10, 20, 29, 0.85); /* Diberi sedikit transparansi */
+            backdrop-filter: blur(5px); /* Efek blur untuk menonjolkan teks */
+        }
+        .hero-maps h1 {
+            font-size: 4rem;
+            color: #ff4655;
+            margin: 0;
+            line-height: 1.1;
+        }
+        .hero-maps p {
+            font-size: 1.1rem;
+            color: #bdc7d1;
+            max-width: 600px;
+            margin: 10px auto 0;
+        }
+
+        /* --- GRID & CARD STYLING MINIMALIS --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .map-card {
+            text-decoration: none;
+            color: inherit;
+            background-color: rgba(26, 40, 53, 0.9); /* Diberi sedikit transparansi */
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.05); /* Garis tepi halus */
+        }
+        .map-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255, 70, 85, 0.15);
+        }
+
+        .map-card .image-wrap {
+            height: 180px;
+            overflow: hidden;
+        }
+        .map-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .map-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .map-card .body {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .map-card .map-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 0 8px 0;
+            color: #ece8e1;
+        }
+        .map-card .map-desc {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #bdc7d1;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
         <div class="container nav">
-            <div class="brand"><span class="dot"></span> VALORANT Hub</div>
+            <div class="brand font-valorant"><span class="dot"></span> VALORANT Hub</div>
             <nav class="nav-links">
                 <a href="home.html">Home</a>
                 <a href="agent.html">Agents</a>
@@ -19,148 +112,97 @@
         </div>
     </header>
 
-    <main class="section">
-        <div class="container">
-            <h2>Maps</h2>
-            <div class="grid" id="mapsGrid">
-                <!-- Map cards -->
-                <div class="map-card" data-name="Abyss" data-full="maps/Loading_Screen_Abyss.webp">
-                    <div class="image-wrap">
-                        <img src="maps/Loading_Screen_Abyss.webp" data-mini="maps/Abyss_minimap.webp" alt="Abyss loading screen">
-                    </div>
-                    <div class="body">
-                        <div class="muted">Abyss (click image to toggle)</div>
-                        <p class="muted" data-desc>Cliffside map with narrow paths and environmental fall hazards.</p>
-                    </div>
-                </div>
-                <div class="map-card" data-name="Ascent" data-full="maps/Loading_Screen_Ascent.webp">
-                    <div class="image-wrap">
-                        <img src="maps/Loading_Screen_Ascent.webp" data-mini="maps/Ascent_minimap.webp" alt="Ascent loading screen">
-                    </div>
-                    <div class="body">
-                        <div class="muted">Ascent</div>
-                        <p class="muted" data-desc>Italian map with a wide-open mid and closable metal doors.</p>
-                    </div>
-                </div>
-                <div class="map-card" data-name="Bind" data-full="maps/Loading_Screen_Bind.webp">
-                    <div class="image-wrap">
-                        <img src="maps/Loading_Screen_Bind.webp" data-mini="maps/Bind_minimap.webp" alt="Bind loading screen">
-                    </div>
-                    <div class="body">
-                        <div class="muted">Bind</div>
-                        <p class="muted" data-desc>Two sites, no mid; teleporters enable fast rotations.</p>
-                    </div>
-                </div>
-                <div class="map-card" data-name="Breeze" data-full="maps/Loading_Screen_Breeze.webp">
-                    <div class="image-wrap">
-                        <img src="maps/Loading_Screen_Breeze.webp" data-mini="maps/Breeze_minimap.webp" alt="Breeze loading screen">
-                    </div>
-                    <div class="body">
-                        <div class="muted">Breeze</div>
-                        <p class="muted" data-desc>Wide open spaces favor long-range duels on a tropical island.</p>
-                    </div>
-                </div>
-                <div class="map-card" data-name="Corrode" data-full="maps/Loading_Screen_Corrode.webp">
-                    <div class="image-wrap">
-                        <img src="maps/Loading_Screen_Corrode.webp" data-mini="maps/Corrode_minimap.webp" alt="Corrode loading screen">
-                    </div>
-                    <div class="body">
-                        <div class="muted">Corrode</div>
-                        <p class="muted" data-desc>Contaminated facility with winding lanes and area control fights.</p>
-                    </div>
-                </div>
-                <div class="map-card" data-name="Fracture" data-full="maps/Loading_Screen_Fracture.webp">
-                    <div class="image-wrap">
-                        <img src="maps/Loading_Screen_Fracture.webp" data-mini="maps/Fracture_minimap.webp" alt="Fracture loading screen">
-                    </div>
-                    <div class="body">
-                        <div class="muted">Fracture</div>
-                        <p class="muted" data-desc>H-shaped map enabling pinch plays from opposite spawns.</p>
-                    </div>
-                </div>
-                <div class="map-card" data-name="Haven" data-full="maps/Loading_Screen_Haven.webp">
-                    <div class="image-wrap">
-                        <img src="maps/Loading_Screen_Haven.webp" data-mini="maps/Haven_minimap.webp" alt="Haven loading screen">
-                    </div>
-                    <div class="body">
-                        <div class="muted">Haven</div>
-                        <p class="muted" data-desc>Three bombsites demand strong rotation and map control.</p>
-                    </div>
-                </div>
-                <div class="map-card" data-name="Icebox" data-full="maps/Loading_Screen_Icebox.webp">
-                    <div class="image-wrap">
-                        <img src="maps/Loading_Screen_Icebox.webp" data-mini="maps/Icebox_minimap.webp" alt="Icebox loading screen">
-                    </div>
-                    <div class="body">
-                        <div class="muted">Icebox</div>
-                        <p class="muted" data-desc>High verticality and tight angles in an arctic shipyard.</p>
-                    </div>
-                </div>
-                <div class="map-card" data-name="Lotus" data-full="maps/Loading_Screen_Lotus.webp">
-                    <div class="image-wrap">
-                        <img src="maps/Loading_Screen_Lotus.webp" data-mini="maps/Lotus_minimap.webp" alt="Lotus loading screen">
-                    </div>
-                    <div class="body">
-                        <div class="muted">Lotus</div>
-                        <p class="muted" data-desc>Rotating doors and three sites create unique rotations.</p>
-                    </div>
-                </div>
-                <div class="map-card" data-name="Pearl" data-full="maps/Loading_Screen_Pearl.webp">
-                    <div class="image-wrap">
-                        <img src="maps/Loading_Screen_Pearl.webp" data-mini="maps/Pearl_minimap.webp" alt="Pearl loading screen">
-                    </div>
-                    <div class="body">
-                        <div class="muted">Pearl</div>
-                        <p class="muted" data-desc>Underwater city with mid fights and strong lurk potential.</p>
-                    </div>
-                </div>
-                <div class="map-card" data-name="Split" data-full="maps/Loading_Screen_Split.webp">
-                    <div class="image-wrap">
-                        <img src="maps/Loading_Screen_Split.webp" data-mini="maps/Split_minimap.webp" alt="Split loading screen">
-                    </div>
-                    <div class="body">
-                        <div class="muted">Split</div>
-                        <p class="muted" data-desc>Ropes and tight chokes make mid control crucial.</p>
-                    </div>
-                </div>
-                <div class="map-card" data-name="Sunset" data-full="maps/Loading_Screen_Sunset.webp">
-                    <div class="image-wrap">
-                        <img src="maps/Loading_Screen_Sunset.webp" data-mini="maps/Sunset_minimap.webp" alt="Sunset loading screen">
-                    </div>
-                    <div class="body">
-                        <div class="muted">Sunset</div>
-                        <p class="muted" data-desc>Los Angeles vibes with mid control and quick rotations.</p>
-                    </div>
+    <main>
+        <section class="hero-maps">
+            <div class="container">
+                <h1 class="font-valorant">EXPLORE THE BATTLEGROUNDS</h1>
+                <p>Each map is a playground to showcase your creative thinking. Designed for team strategies, spectacular plays, and clutch moments.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="grid" id="mapsGrid">
+                    <a href="map-details/abyss.html" class="map-card">
+                        <div class="image-wrap"><img src="maps/Loading_Screen_Abyss.webp" alt="Abyss loading screen"></div>
+                        <div class="body">
+                            <h3 class="map-name">Abyss</h3>
+                            <p class="map-desc">Cliffside map with narrow paths and environmental fall hazards.</p>
+                        </div>
+                    </a>
+                    <a href="map-details/ascent.html" class="map-card">
+                        <div class="image-wrap"><img src="maps/Loading_Screen_Ascent.webp" alt="Ascent loading screen"></div>
+                        <div class="body">
+                            <h3 class="map-name">Ascent</h3>
+                            <p class="map-desc">Italian map with a wide-open mid and closable metal doors.</p>
+                        </div>
+                    </a>
+                    <a href="map-details/bind.html" class="map-card">
+                        <div class="image-wrap"><img src="maps/Loading_Screen_Bind.webp" alt="Bind loading screen"></div>
+                        <div class="body">
+                            <h3 class="map-name">Bind</h3>
+                            <p class="map-desc">Two sites, no mid; teleporters enable fast rotations.</p>
+                        </div>
+                    </a>
+                    <a href="map-details/breeze.html" class="map-card">
+                        <div class="image-wrap"><img src="maps/Loading_Screen_Breeze.webp" alt="Breeze loading screen"></div>
+                        <div class="body">
+                            <h3 class="map-name">Breeze</h3>
+                            <p class="map-desc">Wide open spaces favor long-range duels on a tropical island.</p>
+                        </div>
+                    </a>
+                    <a href="map-details/fracture.html" class="map-card">
+                        <div class="image-wrap"><img src="maps/Loading_Screen_Fracture.webp" alt="Fracture loading screen"></div>
+                        <div class="body">
+                            <h3 class="map-name">Fracture</h3>
+                            <p class="map-desc">H-shaped map enabling pinch plays from opposite spawns.</p>
+                        </div>
+                    </a>
+                    <a href="map-details/haven.html" class="map-card">
+                        <div class="image-wrap"><img src="maps/Loading_Screen_Haven.webp" alt="Haven loading screen"></div>
+                        <div class="body">
+                            <h3 class="map-name">Haven</h3>
+                            <p class="map-desc">Three bombsites demand strong rotation and map control.</p>
+                        </div>
+                    </a>
+                    <a href="map-details/icebox.html" class="map-card">
+                        <div class="image-wrap"><img src="maps/Loading_Screen_Icebox.webp" alt="Icebox loading screen"></div>
+                        <div class="body">
+                            <h3 class="map-name">Icebox</h3>
+                            <p class="map-desc">High verticality and tight angles in an arctic shipyard.</p>
+                        </div>
+                    </a>
+                    <a href="map-details/lotus.html" class="map-card">
+                        <div class="image-wrap"><img src="maps/Loading_Screen_Lotus.webp" alt="Lotus loading screen"></div>
+                        <div class="body">
+                            <h3 class="map-name">Lotus</h3>
+                            <p class="map-desc">Rotating doors and three sites create unique rotations.</p>
+                        </div>
+                    </a>
+                    <a href="map-details/pearl.html" class="map-card">
+                        <div class="image-wrap"><img src="maps/Loading_Screen_Pearl.webp" alt="Pearl loading screen"></div>
+                        <div class="body">
+                            <h3 class="map-name">Pearl</h3>
+                            <p class="map-desc">Underwater city with mid fights and strong lurk potential.</p>
+                        </div>
+                    </a>
+                    <a href="map-details/split.html" class="map-card">
+                        <div class="image-wrap"><img src="maps/Loading_Screen_Split.webp" alt="Split loading screen"></div>
+                        <div class="body">
+                            <h3 class="map-name">Split</h3>
+                            <p class="map-desc">Ropes and tight chokes make mid control crucial.</p>
+                        </div>
+                    </a>
+                    <a href="map-details/sunset.html" class="map-card">
+                        <div class="image-wrap"><img src="maps/Loading_Screen_Sunset.webp" alt="Sunset loading screen"></div>
+                        <div class="body">
+                            <h3 class="map-name">Sunset</h3>
+                            <p class="map-desc">Los Angeles vibes with mid control and quick rotations.</p>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
-
-    <footer class="footer">
-        <div class="container">Click a map image to toggle Loading Screen / Minimap.</div>
-    </footer>
-
-    <script>
-    (function() {
-        const grid = document.getElementById('mapsGrid');
-        grid.addEventListener('click', function(e) {
-            const card = e.target.closest('.map-card');
-            if (!card) return;
-            const img = card.querySelector('img');
-            const full = card.getAttribute('data-full');
-            const current = img.getAttribute('src');
-            const miniStored = img.getAttribute('data-mini');
-            const showingFull = current === full;
-            if (showingFull) {
-                img.src = miniStored || current;
-                img.alt = card.getAttribute('data-name') + ' minimap';
-            } else {
-                img.src = full;
-                img.alt = card.getAttribute('data-name') + ' loading screen';
-            }
-        });
-    })();
-    </script>
 </body>
 </html>
-
