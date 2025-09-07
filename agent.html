@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VALORANT Hub - Agents</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="ControllerClassSymbol.webp">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav">
+            <div class="brand"><span class="dot"></span> VALORANT Hub</div>
+            <nav class="nav-links">
+                <a href="home.html">Home</a>
+                <a class="active" href="agent.html">Agents</a>
+                <a href="maps.html">Maps</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <h2>Agents</h2>
+            <div class="agents-grid" id="agentsGrid">
+                <!-- Agent items -->
+                <div class="agent-item" data-name="Astra" data-full="agents/Astra_Artwork_Full.webp">
+                    <img src="agents/Astra_icon.webp" alt="Astra" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Astra</div>
+                </div>
+                <div class="agent-item" data-name="Breach" data-full="agents/Breach_Artwork_Full.webp">
+                    <img src="agents/Breach_icon.webp" alt="Breach" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Breach</div>
+                </div>
+                <div class="agent-item" data-name="Brimstone" data-full="agents/Brimstone_Artwork_Full.webp">
+                    <img src="agents/Brimstone_icon.webp" alt="Brimstone" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Brimstone</div>
+                </div>
+                <div class="agent-item" data-name="Chamber" data-full="agents/Chamber_Artwork_Full.webp">
+                    <img src="agents/Chamber_icon.webp" alt="Chamber" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Chamber</div>
+                </div>
+                <div class="agent-item" data-name="Clove" data-full="agents/Clove_Artwork_Full.webp">
+                    <img src="agents/Clove_icon.webp" alt="Clove" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Clove</div>
+                </div>
+                <div class="agent-item" data-name="Cypher" data-full="agents/Cypher_Artwork_Full.webp">
+                    <img src="agents/Cypher_icon.webp" alt="Cypher" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Cypher</div>
+                </div>
+                <div class="agent-item" data-name="Deadlock" data-full="agents/Deadlock_Artwork_Full.webp">
+                    <img src="agents/Deadlock_icon.webp" alt="Deadlock" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Deadlock</div>
+                </div>
+                <div class="agent-item" data-name="Fade" data-full="agents/Fade_Artwork_Full.webp">
+                    <img src="agents/Fade_icon.webp" alt="Fade" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Fade</div>
+                </div>
+                <div class="agent-item" data-name="Gekko" data-full="agents/Gekko_Artwork_Full.webp">
+                    <img src="agents/Gekko_icon.webp" alt="Gekko" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Gekko</div>
+                </div>
+                <div class="agent-item" data-name="Harbor" data-full="agents/Harbor_Artwork_Full.webp">
+                    <img src="agents/Harbor_icon.webp" alt="Harbor" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Harbor</div>
+                </div>
+                <div class="agent-item" data-name="Iso" data-full="agents/Iso_Artwork_Full.webp">
+                    <img src="agents/Iso_icon.webp" alt="Iso" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Iso</div>
+                </div>
+                <div class="agent-item" data-name="Jett" data-full="agents/Jett_Artwork_Full.webp">
+                    <img src="agents/Jett_icon.webp" alt="Jett" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Jett</div>
+                </div>
+                <div class="agent-item" data-name="KAY/O" data-full="agents/KAYO_Artwork_Full.webp">
+                    <img src="agents/KAYO_icon.webp" alt="KAY/O" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">KAY/O</div>
+                </div>
+                <div class="agent-item" data-name="Killjoy" data-full="agents/Killjoy_Artwork_Full.webp">
+                    <img src="agents/Killjoy_icon.webp" alt="Killjoy" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Killjoy</div>
+                </div>
+                <div class="agent-item" data-name="Neon" data-full="agents/Neon_Artwork_Full.webp">
+                    <img src="agents/Neon_icon.webp" alt="Neon" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Neon</div>
+                </div>
+                <div class="agent-item" data-name="Omen" data-full="agents/Omen_Artwork_Full.webp">
+                    <img src="agents/Omen_icon.webp" alt="Omen" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Omen</div>
+                </div>
+                <div class="agent-item" data-name="Phoenix" data-full="agents/Phoenix_Artwork_Full.webp">
+                    <img src="agents/Phoenix_icon.webp" alt="Phoenix" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Phoenix</div>
+                </div>
+                <div class="agent-item" data-name="Raze" data-full="agents/Raze_Artwork_Full.webp">
+                    <img src="agents/Raze_icon.webp" alt="Raze" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Raze</div>
+                </div>
+                <div class="agent-item" data-name="Reyna" data-full="agents/Reyna_Artwork_Full.webp">
+                    <img src="agents/Reyna_icon.webp" alt="Reyna" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Reyna</div>
+                </div>
+                <div class="agent-item" data-name="Sage" data-full="agents/Sage_Artwork_Full.webp">
+                    <img src="agents/Sage_icon.webp" alt="Sage" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Sage</div>
+                </div>
+                <div class="agent-item" data-name="Skye" data-full="agents/Skye_Artwork_Full.webp">
+                    <img src="agents/Skye_icon.webp" alt="Skye" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Skye</div>
+                </div>
+                <div class="agent-item" data-name="Sova" data-full="agents/Sova_Artwork_Full.webp">
+                    <img src="agents/Sova_icon.webp" alt="Sova" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Sova</div>
+                </div>
+                <div class="agent-item" data-name="Tejo" data-full="agents/Tejo_Artwork_Full.webp">
+                    <img src="agents/Tejo_icon.webp" alt="Tejo" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Tejo</div>
+                </div>
+                <div class="agent-item" data-name="Viper" data-full="agents/Viper_Artwork_Full.webp">
+                    <img src="agents/Viper_icon.webp" alt="Viper" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Viper</div>
+                </div>
+                <div class="agent-item" data-name="Vyse" data-full="agents/Vyse_Artwork_Full.webp">
+                    <img src="agents/Vyse_icon.webp" alt="Vyse" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Vyse</div>
+                </div>
+                <div class="agent-item" data-name="Waylay" data-full="agents/Waylay_Artwork_Full.webp">
+                    <img src="agents/Waylay_icon.webp" alt="Waylay" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Waylay</div>
+                </div>
+                <div class="agent-item" data-name="Yoru" data-full="agents/Yoru_Artwork_Full.webp">
+                    <img src="agents/Yoru_icon.webp" alt="Yoru" onerror="this.onerror=null; this.src=this.closest('.agent-item').getAttribute('data-full');">
+                    <div class="name">Yoru</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal" id="agentModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="agentModalTitle">Agent</div>
+                <button class="close-btn" id="agentModalClose">Close</button>
+            </div>
+            <div class="modal-body">
+                <img id="agentModalImage" src="" alt="Agent Full Artwork">
+                <div style="padding:12px">
+                    <p id="agentModalDesc" class="muted"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        const grid = document.getElementById('agentsGrid');
+        const modal = document.getElementById('agentModal');
+        const modalImg = document.getElementById('agentModalImage');
+        const modalTitle = document.getElementById('agentModalTitle');
+        const modalDesc = document.getElementById('agentModalDesc');
+
+        // Short descriptions adapted from the Valorant Wiki (valorant.fandom.com)
+        // Credit: Riot Games & community wiki. Text trimmed for brevity.
+        const agentDescriptions = {
+            "Astra": "Controller who reshapes battlefields with cosmic smokes and utility.",
+            "Breach": "Initiator who opens space with seismic blasts for his team.",
+            "Brimstone": "Controller with precise smokes and an Orbital Strike for area control.",
+            "Chamber": "Sentinel marksman with teleport anchors and custom weapons for picks.",
+            "Clove": "Controller enabling re-engage plays with supportive utility.",
+            "Cypher": "Intel Sentinel who sets traps and cameras to gather information.",
+            "Deadlock": "Sentinel that locks down lanes and halts pushes with tech.",
+            "Fade": "Initiator who hunts down foes using nightmares and tracking.",
+            "Gekko": "Initiator deploying creatures to scout, stun, and plant/defuse.",
+            "Harbor": "Water-bending Controller with dynamic walls and smokes.",
+            "Iso": "Duelist isolating 1v1s with shields and an arena ultimate.",
+            "Jett": "Agile Duelist with dash and updraft for explosive entries.",
+            "KAY/O": "Initiator that suppresses enemy abilities and leads site takes.",
+            "Killjoy": "Inventor Sentinel with turret and grenades to hold sites.",
+            "Neon": "High-speed Duelist sprinting and sliding with electric power.",
+            "Omen": "Mysterious Controller with dark smokes and short teleports.",
+            "Phoenix": "Fiery Duelist with self-heal and flashes for solo entries.",
+            "Raze": "Explosive Duelist using satchels and rockets to clear space.",
+            "Reyna": "Snowball Duelist consuming orbs to heal or become intangible.",
+            "Sage": "Healer Sentinel with walls and resurrection to sustain allies.",
+            "Skye": "Support Initiator with party heals and scouting hawk.",
+            "Sova": "Recon Initiator with revealing arrows and a scouting drone.",
+            "Tejo": "Placeholder agent in assets; fill with your custom lore.",
+            "Viper": "Toxic Controller with walls and smokes that decay enemies.",
+            "Vyse": "Newest agent in these assets; placeholder description.",
+            "Waylay": "Placeholder agent; add your custom description.",
+            "Yoru": "Trickster Duelist with teleports and decoys to outplay."
+        };
+        const btnClose = document.getElementById('agentModalClose');
+
+        function openModal(src, title) {
+            modalImg.src = src;
+            modalTitle.textContent = title;
+            modalDesc.textContent = agentDescriptions[title] || "";
+            modal.classList.add('open');
+            modal.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeModal() {
+            modal.classList.remove('open');
+            modal.setAttribute('aria-hidden', 'true');
+            modalImg.src = '';
+            modalDesc.textContent = '';
+        }
+
+        grid.addEventListener('click', function(e) {
+            const item = e.target.closest('.agent-item');
+            if (!item) return;
+            const src = item.getAttribute('data-full');
+            const name = item.getAttribute('data-name');
+            openModal(src, name);
+        });
+
+        btnClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
+        window.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+    })();
+    </script>
+</body>
+</html>
+
