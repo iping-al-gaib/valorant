@@ -8,11 +8,74 @@
     <link rel="icon" href="DuelistClassSymbol.webp">
     <meta name="theme-color" content="#ff4655">
     <meta name="description" content="Portal fan-made VALORANT: Agents, Maps, dan Artworks.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #0f1923;
+            background-image: radial-gradient(circle at 50% 150%, rgba(175, 54, 63, 0.15), #0f1923 40%);
+        }
+        .hero { height: 100vh; display: flex; align-items: center; position: relative; }
+        .hero-content { text-align: left; max-width: 600px; }
+        .hero-content h1 { font-size: 4rem; line-height: 1.1; }
+        .hero video {
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%; object-fit: cover;
+            z-index: -1; filter: brightness(0.6);
+        }
+        .spotlight-section { display: flex; gap: 40px; align-items: center; padding: 50px 0; }
+        .spotlight-image { flex: 1; }
+        .spotlight-image img { width: 100%; border-radius: 8px; }
+        .spotlight-text { flex: 1; }
+        .spotlight-text h2 { font-size: 3rem; color: #ff4655; }
+        .carousel-container { width: 100%; overflow: hidden; padding: 20px 0; }
+        .artworks-grid { display: flex; gap: 20px; transition: transform 0.5s ease-in-out; }
+        .artworks-grid .card { min-width: calc(25% - 15px); flex-shrink: 0; transition: transform 0.3s ease; }
+        .artworks-grid .card:hover { transform: scale(1.05); }
+
+        @font-face {
+          font-family: 'ValorantFont';
+          src: url('fonts/Valorant Font.ttf') format('truetype');
+        }
+        .font-valorant { font-family: 'ValorantFont', sans-serif; }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 1rem;
+        }
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #1e1e1e;
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .social-icons a:hover {
+            background-color: #ff4655;
+            transform: scale(1.1);
+        }
+
+        /* (BARU) Style untuk Footer */
+        .footer .container {
+            text-align: center; /* Membuat semua teks di dalamnya rata tengah */
+            line-height: 1.6;   /* Memberi sedikit jarak antar baris agar tidak terlalu rapat */
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
         <div class="container nav">
-            <div class="brand"><span class="dot"></span> VALORANT Hub by Iping</div>
+            <div class="brand font-valorant"><span class="dot"></span> VALORANT Hub by Iping</div>
             <nav class="nav-links">
                 <a class="active" href="home.html">Home</a>
                 <a href="agent.html">Agents</a>
@@ -25,74 +88,97 @@
         <section class="hero">
             <video src="background/11_05_Homescreen_VCT.mp4" autoplay muted loop playsinline></video>
             <div class="hero-content container">
-                <h1>Welcome to VALORANT Hub by Iping Al Gaib</h1>
-                <p class="muted">Explore Agents, Maps, and Collection of your FavoriteArtworks.</p>
+                <h1 class="font-valorant">A HUB FOR<br>ALL VALORANT PLAYERS</h1>
+                <p class="muted">Explore Agents, Maps, and a Collection of your Favorite Artworks.</p>
                 <div class="cta-row">
-                    <a class="btn" href="agent.html">Lihat Agents</a>
-                    <a class="btn secondary" href="maps.html">Lihat Maps</a>
+                    <a class="btn" href="agent.html">Explore Agents</a>
+                    <a class="btn secondary" href="maps.html">Discover Maps</a>
                 </div>
             </div>
         </section>
-
         <section class="section">
             <div class="container">
-                <h2>Featured Artworks</h2>
-                <div class="grid">
-                    <div class="card">
-                        <img class="thumb" src="artworks/Accessories.webp" alt="Accessories">
-                        <div class="body"><div class="muted">Accessories</div></div>
+                <div class="spotlight-section">
+                    <div class="spotlight-text">
+                        <h2 class="font-valorant">MEET THE AGENTS</h2>
+                        <p class="muted">More than guns and bullets, you’ll choose an Agent armed with adaptive, swift, and lethal abilities that create opportunities to let your gunplay shine...</p>
+                        <div class="cta-row" style="margin-top: 1.5rem;"><a href="agent.html" class="btn">View All Agents</a></div>
                     </div>
-                    <div class="card">
-                        <img class="thumb" src="artworks/valorant_go.webp" alt="Bundle VALORANT GO!">
-                        <div class="body"><div class="muted">VALORANT GO! Bundle</div></div>
-                    </div>
-                    <div class="card">
-                        <img class="thumb" src="artworks/LNY_2023_2.webp" alt="LNY 2023 2">
-                        <div class="body"><div class="muted">LNY 2023 (2)</div></div>
-                    </div>
-                    <div class="card">
-                        <img class="thumb" src="artworks/LNY_2023_7.webp" alt="LNY 2023 7">
-                        <div class="body"><div class="muted">LNY 2023 (7)</div></div>
-                    </div>
-                    <div class="card">
-                        <img class="thumb" src="artworks/LNY_2024_2.webp" alt="LNY 2024 2">
-                        <div class="body"><div class="muted">LNY 2024 (2)</div></div>
-                    </div>
-                    <div class="card">
-                        <img class="thumb" src="artworks/LNY_Sage-2_ShoppingB.webp" alt="LNY Sage Shopping">
-                        <div class="body"><div class="muted">LNY Sage Shopping</div></div>
-                    </div>
-                    <div class="card">
-                        <img class="thumb" src="artworks/Maps.webp" alt="Maps Artwork">
-                        <div class="body"><div class="muted">Maps Artwork</div></div>
-                    </div>
-                </div> <!-- Penutup .grid -->
-                
-                <!-- Tombol Tautan Eksternal yang Baru Ditambahkan -->
-                <div style="text-align: center; margin-top: 2rem;">
-                    <a class="btn" href="https://valorant.fandom.com/wiki/VALORANT_Wiki" target="_blank" rel="noopener noreferrer">Lihat Lebih Banyak di Fandom Wiki</a>
+                    <div class="spotlight-image"><img src="artworks/agent_spotlight.png" alt="Agent Spotlight"></div>
                 </div>
-
+            </div>
+        </section>
+        <section class="section" style="background: rgba(0,0,0,0.2);">
+            <div class="container">
+                <h2 class="font-valorant" style="text-align: center;">Featured Artworks</h2>
+                <div class="carousel-container">
+                    <div class="artworks-grid" id="artworksGrid">
+                        <div class="card"><img class="thumb" src="artworks/Accessories.webp" alt="Accessories"><div class="body"><div class="muted">Accessories</div></div></div>
+                        <div class="card"><img class="thumb" src="artworks/valorant_go.webp" alt="Bundle VALORANT GO!"><div class="body"><div class="muted">VALORANT GO! Bundle</div></div></div>
+                        <div class="card"><img class="thumb" src="artworks/LNY_2023_2.webp" alt="LNY 2023 2"><div class="body"><div class="muted">LNY 2023 (2)</div></div></div>
+                        <div class="card"><img class="thumb" src="artworks/LNY_2024_2.webp" alt="LNY 2024 2"><div class="body"><div class="muted">LNY 2024 (2)</div></div></div>
+                        <div class="card"><img class="thumb" src="artworks/LNY_Sage-2_ShoppingB.webp" alt="LNY Sage Shopping"><div class="body"><div class="muted">LNY Sage Shopping</div></div></div>
+                        <div class="card"><img class="thumb" src="artworks/Maps.webp" alt="Maps Artwork"><div class="body"><div class="muted">Maps Artwork</div></div></div>
+                        <div class="card"><img class="thumb" src="artworks/Accessories.webp" alt="Accessories"><div class="body"><div class="muted">Accessories</div></div></div>
+                        <div class="card"><img class="thumb" src="artworks/valorant_go.webp" alt="Bundle VALORANT GO!"><div class="body"><div class="muted">VALORANT GO! Bundle</div></div></div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;"><a class="btn" href="https://valorant.fandom.com/wiki/VALORANT_Wiki" target="_blank" rel="noopener noreferrer">View More on Fandom Wiki</a></div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="container">
+                <h2 class="font-valorant" style="text-align: center;">Official Links</h2>
+                <div class="social-icons">
+                    <a href="https://twitter.com/PlayVALORANT" target="_blank" rel="noopener noreferrer" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.youtube.com/PlayValorant" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/playvalorantofficial/" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@valorant" target="_blank" rel="noopener noreferrer" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.facebook.com/VALORANT" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://discord.com/invite/valorant" target="_blank" rel="noopener noreferrer" title="Discord"><i class="fa-brands fa-discord"></i></a>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Section Sumber yang Baru Ditambahkan -->
-    <section class="section">
-        <div class="container">
-            <h2 style="text-align: center;">Source & Official Links</h2>
-            <!-- Mengubah list menjadi barisan tombol -->
-            <div class="cta-row" style="justify-content: center; margin-top: 1rem;">
-                <a class="btn" href="https://playvalorant.com/en-us/" target="_blank" rel="noopener noreferrer">Official Website</a>
-                <a class="btn secondary" href="https://twitter.com/PlayVALORANT" target="_blank" rel="noopener noreferrer">Twitter (X)</a>
-                <a class="btn secondary" href="https://www.instagram.com/playvalorantofficial/" target="_blank" rel="noopener noreferrer">Instagram</a>
-            </div>
-        </div>
-    </section>
-
     <footer class="footer">
-        <div class="container">Mohammad Naufal Firdaus fan project (24081494178) .  Assets © Riot Games.</div>
+        <div class="container">
+            a fan project by.
+            <br>
+            Mohammad Naufal Firdaus (iping al gaib)
+            <br>
+            (24081494178)
+            <br>
+            2024i
+            <br>
+            Assets © Riot Games.
+        </div>
     </footer>
+
+    <script>
+    (function() {
+        const grid = document.getElementById('artworksGrid');
+        if (!grid) return;
+        const cards = grid.querySelectorAll('.card');
+        if (cards.length === 0) return;
+        let currentIndex = 0;
+        const totalCards = cards.length;
+        const cardWidth = cards[0].offsetWidth + 20;
+        function slide() {
+            currentIndex++;
+            grid.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            if (currentIndex >= totalCards / 2) {
+                setTimeout(() => {
+                    grid.style.transition = 'none';
+                    currentIndex = 0;
+                    grid.style.transform = `translateX(0)`;
+                    setTimeout(() => { grid.style.transition = 'transform 0.5s ease-in-out'; }, 50);
+                }, 500);
+            }
+        }
+        setInterval(slide, 3000);
+    })();
+    </script>
 </body>
 </html>
-
